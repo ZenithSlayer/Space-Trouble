@@ -1,0 +1,82 @@
+{
+	"name": "MM-sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 147223888749098,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "MMstart"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 961022694198882,
+					"parameters": {
+						"audio-file": "MMbutton",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 582425870253492,
+					"parameters": {
+						"layout": "Gameplay Sect 1"
+					}
+				}
+			],
+			"sid": 576299725747933
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 280396860691294,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "MMcredits"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 623255097878890,
+					"parameters": {
+						"audio-file": "MMbutton",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 482083182861689,
+					"parameters": {
+						"layout": "Credits"
+					}
+				}
+			],
+			"sid": 848567587507874
+		}
+	],
+	"sid": 754425493597615
+}

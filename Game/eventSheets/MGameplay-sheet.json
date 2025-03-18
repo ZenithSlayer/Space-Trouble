@@ -1,0 +1,132 @@
+{
+	"name": "MGameplay-sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "MainChar",
+					"sid": 577639634928874,
+					"behaviorType": "8Direções"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "MainChar",
+					"sid": 683182372627066,
+					"parameters": {
+						"animation": "\"Walk\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 508058150626805
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-speed",
+					"objectClass": "MainChar",
+					"sid": 739824221535000,
+					"behaviorType": "8Direções",
+					"parameters": {
+						"comparison": 0,
+						"speed": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "MainChar",
+					"sid": 652648341463260,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 446818270573615
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 597425452592295,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "MainChar",
+					"sid": 470402575226388,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 454868560140777
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 673095619615181,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "MainChar",
+					"sid": 402209199480441,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 403288276988563
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "MainChar",
+					"sid": 896095334537703,
+					"parameters": {
+						"animation": "\"Walk\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 660718515474489,
+					"parameters": {
+						"audio-file": "Grass-foot",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"GF\""
+					}
+				}
+			],
+			"sid": 779200358590820
+		}
+	],
+	"sid": 860287451475130
+}
