@@ -2,6 +2,16 @@
 	"name": "MGameplay-sheet",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "Crouch",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 208378814057051
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -9,6 +19,14 @@
 					"objectClass": "MainChar",
 					"sid": 577639634928874,
 					"behaviorType": "8Direções"
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 102951346884383,
+					"parameters": {
+						"value": "Crouch=0"
+					}
 				}
 			],
 			"actions": [
@@ -36,6 +54,14 @@
 						"comparison": 0,
 						"speed": "0"
 					}
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 662962695429447,
+					"parameters": {
+						"value": "Crouch=0"
+					}
 				}
 			],
 			"actions": [
@@ -50,6 +76,72 @@
 				}
 			],
 			"sid": 446818270573615
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "MainChar",
+					"sid": 702660245592437,
+					"behaviorType": "8Direções"
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 388974712090616,
+					"parameters": {
+						"value": "Crouch=1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "MainChar",
+					"sid": 136580166467277,
+					"parameters": {
+						"animation": "\"Crouch Walk\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 568541271980053
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-speed",
+					"objectClass": "MainChar",
+					"sid": 822116657072791,
+					"behaviorType": "8Direções",
+					"parameters": {
+						"comparison": 0,
+						"speed": "0"
+					}
+				},
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 155105935119455,
+					"parameters": {
+						"value": "Crouch=1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "MainChar",
+					"sid": 321534672557258,
+					"parameters": {
+						"animation": "\"Crouch\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 682630925238261
 		},
 		{
 			"eventType": "block",
@@ -115,17 +207,88 @@
 				{
 					"id": "play",
 					"objectClass": "Áudio",
-					"sid": 660718515474489,
+					"sid": 520551793651875,
 					"parameters": {
 						"audio-file": "Grass-foot",
 						"loop": "not-looping",
-						"volume": "-10",
+						"volume": "0",
 						"stereo-pan": "0",
 						"tag-optional": "\"GF\""
 					}
 				}
 			],
 			"sid": 779200358590820
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 259399988812662
+				}
+			],
+			"actions": [
+				{
+					"id": "set-looping",
+					"objectClass": "Vídeo",
+					"sid": 110293229385696,
+					"parameters": {
+						"mode": "looping"
+					}
+				}
+			],
+			"sid": 954442207384458
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-left-right-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 294529461745962,
+					"parameters": {
+						"key": "left-shift"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 237711130019273,
+					"parameters": {
+						"variable": "Crouch",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 204230488088310
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-left-right-key-released",
+					"objectClass": "Teclado",
+					"sid": 203049011381631,
+					"parameters": {
+						"key": "left-shift"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 122007744504972,
+					"parameters": {
+						"variable": "Crouch",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 302062825683263
 		}
 	],
 	"sid": 860287451475130

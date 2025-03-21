@@ -42,9 +42,23 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "video",
+			"name": "Vídeo",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direções",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Sólido",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -60,7 +74,10 @@
 			"Sprite",
 			"MainChar",
 			"Teclado",
-			"CreditsName"
+			"CreditsName",
+			"Vídeo",
+			"Sprite2",
+			"Sprite3"
 		],
 		"subfolders": []
 	},
@@ -117,7 +134,16 @@
 			"subfolders": []
 		},
 		"video": {
-			"items": [],
+			"items": [
+				{
+					"name": "Start BG.mp4",
+					"type": "video/mp4",
+					"sid": 680627648961722,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"font": {
