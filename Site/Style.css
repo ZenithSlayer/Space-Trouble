@@ -1,6 +1,10 @@
 
 body{
     margin: 0px;
+    p{
+        margin: 10px;
+        align-self: center;
+    }
 }
 header{
     width: 100%;
