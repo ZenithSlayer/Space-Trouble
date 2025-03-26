@@ -1,16 +1,30 @@
 
 body{
+    background-color: gray;
     margin: 0px;
-    p{
-        margin: 10px;
-        align-self: center;
+    font-family: Arial, Helvetica, sans-serif;
+    .ILTR{
+        list-style: none;
+        float: right;
+        padding: 10px 100px 10px 100px;
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;          
+        }
+        img{
+            height: 200px;
+            width: 200px;
+            float: left;
+            margin-right: 25px;
+        }
     }
 }
 header{
     width: 100%;
     padding: 10px;
     background-color: black;
-    box-shadow: 10px 20px 5px #ccc;
+    box-shadow: 5px 20px 5px #272727;
     box-sizing: border-box;
     border-radius: 0px 0px 75px 0px;
     img{
