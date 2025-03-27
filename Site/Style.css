@@ -1,49 +1,109 @@
+* {
+    margin: 0;
+}
 
-body{
-    background-color: gray;
-    margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    .ILTR{
+header {
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    border-radius: 0px 0px 100px 0px;
+    padding: 10px 10px 10px 10px;
+    img {
+        height: 100px;
+    }
+}
+
+nav {
+    float: right;
+    padding-right: 300px;
+    padding-top: 25px;
+    ul {
         list-style: none;
-        float: right;
-        padding: 10px 100px 10px 100px;
-        div{
-            display: flex;
-            justify-content: center;
-            align-items: center;          
-        }
-        img{
-            height: 200px;
-            width: 200px;
-            float: left;
-            margin-right: 25px;
+        font-family: Tektur;
+        text-transform: uppercase;
+        li {
+            display: inline-block;
+            margin: 15px;
+            a {
+                text-decoration: none;
+                color: white;
+                transition: 1s all;
+            }
+            a:hover {
+                color: yellow;
+            }
+            .btn {
+                background-color: red;
+                padding: 10px 20px 10px 20px;
+                border-radius: 10px;
+            }
+            .btn:hover {
+                background-color: darkred;
+                color: white;
+            }
         }
     }
 }
-header{
-    width: 100%;
-    padding: 10px;
+
+body {
+    background-color: gray;
+    color: white;
+}
+
+p {
+    font-family: arial;
+    color: white;
+}
+
+footer {
     background-color: black;
-    box-shadow: 5px 20px 5px #272727;
-    box-sizing: border-box;
-    border-radius: 0px 0px 75px 0px;
-    img{
-        height: 75px;
-        margin-left: 5%;
-    }
-    nav{
-        float: right;
-        padding-top: 30px;
-        padding-right: 90px;
-        a{
-            font-family: "Tektur", sans-serif;
-            text-decoration: none;
-            color: white;
-            padding: 30px;
+    padding: 20px 0px;
+    p {
+        text-align: center;
+    } 
+}
+
+.grid-2dir {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    padding: 200px 100px 50px 100px;
+    .col {
+        img {
+            width: 100%;
         }
-        a:hover{
-            transition: 1s;
-            color: yellow;
+    }
+}
+
+main {
+    width: 1200px;
+    margin: auto;
+    .banner {
+        p, h1 {
+            margin: 30px;
+        }
+        h1 {
+            font-size: 40px;
+            font-family: arial;
+        }
+        .btn {
+            background-color: orange;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    }
+
+    #sobre {
+        h2 {
+            font-family: arial;
+            text-align: center;
+            padding: 30px;
+        img {
+            width: 10px;
+            padding: 10px;
+        }
         }
     }
 }
