@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 
 header {
@@ -12,35 +13,25 @@ header {
         height: 75px;
         padding: 10px 100px;
     }
-}
-
-nav {
-    float: right;
-    padding-right: 300px;
-    padding-top: 25px;
-    ul {
-        list-style: none;
-        font-family: Tektur;
-        text-transform: uppercase;
-        li {
-            display: inline-block;
-            margin: 15px;
-            a {
-                text-decoration: none;
-                color: white;
-                transition: 1s all;
-            }
-            a:hover {
-                color: yellow;
-            }
-            .btn {
-                background-color: red;
-                padding: 10px 20px 10px 20px;
-                border-radius: 10px;
-            }
-            .btn:hover {
-                background-color: darkred;
-                color: white;
+    nav {
+        float: right;
+        padding-right: 300px;
+        padding-top: 10px;
+        ul {
+            list-style: none;
+            font-family: Tektur;
+            text-transform: uppercase;
+            li {
+                display: inline-block;
+                margin: 15px;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    transition: 1s all;
+                }
+                a:hover {
+                    color: yellow;
+                }
             }
         }
     }
@@ -54,14 +45,6 @@ body {
 p {
     font-family: arial;
     color: white;
-}
-
-footer {
-    background-color: black;
-    padding: 20px 0px;
-    p {
-        text-align: center;
-    } 
 }
 
 .grid-2dir {
@@ -79,7 +62,7 @@ footer {
 main {
     width: 1200px;
     margin: auto;
-    .banner {
+    #home {
         p, h1 {
             margin: 30px;
         }
@@ -88,25 +71,63 @@ main {
             font-family: arial;
         }
         .btn {
-            background-color: orange;
-            color: white;
+            background-color: rgb(255, 184, 53);
+            color: rgb(59, 59, 59);
             text-decoration: none;
             border-radius: 10px;
             padding: 10px;
+            transition: 1s;
+        }
+        .btn:hover {
+            background-color: rgb(255, 166, 0);
+            color: rgb(0, 0, 0);
         }
     }
 
     #sobre {
-        align-content: center;
         h2 {
             font-family: arial;
             text-align: center;
             padding: 30px;
-        img {
-            width: 10px;
-            padding: 10px;
-            width: 100%;
         }
+        img {
+            display: block;
+            margin: auto;
+            width: 100%;
+            border-radius: 40px;
+            border: 5px solid rgb(0, 0, 0);
+        }
+        p {
+            padding-top: 50px;
+        }
+    }
+    
+    #jogo {
+        padding-top: 100px;
+    }
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(78, 78, 78);
+    border-radius: 50px 0px px 0px;
+    padding: 10px 10px 10px 10px;
+    p {
+        box-sizing: border-box;
+    }
+    img {
+        height: 75px;
+        padding: 10px 100px;
+    }
+    nav {
+        float: right;
+        padding-right: 100px;
+        ul {
+            list-style: none;
+            li {
+                display: inline-block;
+            }
         }
     }
 }
