@@ -51,7 +51,7 @@ p {
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: center;
-    padding: 200px 100px 50px 100px;
+    padding: 300px 100px 500px 100px;
     .col {
         img {
             width: 100%;
@@ -99,6 +99,7 @@ main {
         }
         p {
             padding-top: 50px;
+            font-size: xx-large;
         }
     }
     
