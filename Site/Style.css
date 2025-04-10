@@ -36,6 +36,32 @@ header {
     }
 }
 
+footer {
+    height: 300px;
+    border-top-left-radius: 100px;
+    background-color: black;
+    div {
+        padding-top: 150px;
+    }
+    img {
+        height: 50px;
+    }
+    .backtostart {
+        font-family: Tektur;
+        padding-left: 50px;
+        text-align: center;
+        float: left;
+        color: white;
+    }
+    .sociallinks {
+        float: right;
+        grid-template-columns: 50% 50%;
+        a {
+            padding: 30px;
+        }
+    } 
+}
+
 body {
     background-color: rgb(51, 51, 51);
     
@@ -60,7 +86,8 @@ main {
             img {
                 display: block;
                 margin: auto;
-                height: 300px;
+                max-width: 90%;
+                height: auto;
                 border-radius: 400px;
             }
             .btn {
@@ -79,7 +106,7 @@ main {
         }
     }
     #sobre {
-        padding-bottom: 100px;
+        padding-bottom: 300px;
         p {
             text-transform: uppercase;
             font-family: Tektur;
@@ -97,8 +124,23 @@ main {
         img {
             display: block;
             margin: auto;
-            width: 600px;
+            max-width: 90%;
+            height: auto;
             border-radius: 30px;
+        }
+    }
+    #jogo {
+        padding-bottom: 300px;
+        p {
+            text-align: center;
+            font-family: Tektur;
+            font-size: xx-large;
+        }
+        iframe {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+            height: auto;
         }
     }
 }
