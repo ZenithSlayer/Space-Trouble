@@ -1,4 +1,4 @@
-document.querySelectorAll('a').forEach(anchor => {
+document.querySelectorAll('a.NavLink').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
