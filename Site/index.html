@@ -4,33 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Trouble</title>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" href="Imagens/Site Logo.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 
 <body>
-
     <header data-aos="fade-down">
-        <a href="#home" title="Home">
-            <img src="Imagens/Site Logo.png" alt="Logo do site">
-        </a>
-
         <nav class="Navani">
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a><img src="Imagens/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" width="50"></a></li>
+                <li><a href="#home" title="Home" class="NavLink">Home</a></li>
+                <li><a href="#sobre" title="Sobre" class="NavLink">Sobre</a></li>
+                <li><a href="#jogo" title="jogo" class="NavLink">Jogo</a></li>
+            </ul>
             <ul>
-                <li>
-                    <a href="#home"
-                    title="Home" class="NavLink">Home</a>
-                </li>
-                <li>
-                    <a href="#sobre"
-                    title="Sobre" class="NavLink">Sobre</a>
-                </li>
-                <li>
-                    <a href="#jogo"
-                    title="jogo" class="NavLink">Jogo</a>
-                </li>
+                <li><a href="#home"title="Home" class="NavLink"><img src="Imagens/Site Logo.png" alt="Logo do site"></a></li>
+                <li class="hideOnMobile"><a href="#home"title="Home" class="NavLink">Home</a></li>
+                <li class="hideOnMobile"><a href="#sobre"title="Sobre" class="NavLink">Sobre</a></li>
+                <li class="hideOnMobile"><a href="#jogo"title="jogo" class="NavLink">Jogo</a></li>
+                <li class="menu-button" onclick=showSidebar()><a><img src="Imagens/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" width="50"></a></li>
             </ul>
         </nav>
     </header>
@@ -56,7 +50,7 @@
                 <p>Sobre o Projeto e Jogo</p>
                 <img src="Imagens/Space(1).jpeg" alt="">
             </div>
-            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+            <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                 <h1>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perspiciatis nihil fugiat vero. Molestiae nostrum neque pariatur ipsa possimus at a, accusantium quibusdam optio eveniet doloribus dolores voluptatibus. Asperiores, ab! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis unde excepturi earum nihil maxime impedit, asperiores recusandae cupiditate pariatur, exercitationem optio consequatur esse quaerat labore, facere corporis odit repellendus delectus.
                 </h1>
@@ -70,22 +64,30 @@
             </div>
     </main>
 
-    <footer data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-        <div>
-            <a href="#home" class="NavLink"><img src="Imagens/Up-arrow.png" alt=""></a>
-            <p>Voltar para o inicio</p>
-        </div>
-        <div class="sociallinks">
-            <a href="https://www.linkedin.com/in/miguel-lizier-krul/">
-                <img src="Imagens/Linkedin-logo.png" alt="">
-            </a>
-            <a href="https://www.instagram.com/zenith.slayer">
-                <img src="Imagens/insta-logo.png" alt="">
-            </a>    
-        </div>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="https://www.instagram.com/zenith.slayer"><img src="Imagens/insta-logo.png" alt=""></a></li>
+                <li><a href="https://www.linkedin.com/in/miguel-lizier-krul/"><img src="Imagens/Linkedin-logo.png" alt=""></a></li>
+            </ul>
+            <div>
+                <p>Todos os direitos reservados a mim <html>&#x1F60E</html></p>
+                <img src="Imagens/Criador do site.jpg" alt="">
+            </div>
+        </nav>
     </footer>
 </body>
 
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector(".sidebar")
+        sidebar.style.display= "flex"
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector(".sidebar")
+        sidebar.style.display= "none"
+    }
+</script>
 <script src="Script.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
