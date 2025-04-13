@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Trouble</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="Imagens/Site Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+
+<body>
+    <header data-aos="fade-down">
+        <nav class="Navani">
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a><img src="Imagens/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" width="50"></a></li>
+                <li><a href="#home" title="Home" class="NavLink">Home</a></li>
+                <li><a href="#sobre" title="Sobre" class="NavLink">Sobre</a></li>
+                <li><a href="#jogo" title="jogo" class="NavLink">Jogo</a></li>
+            </ul>
+            <ul>
+                <li><a href="#home"title="Home" class="NavLink"><img src="Imagens/Site Logo.png" alt="Logo do site"></a></li>
+                <li class="hideOnMobile"><a href="#home"title="Home" class="NavLink">Home</a></li>
+                <li class="hideOnMobile"><a href="#sobre"title="Sobre" class="NavLink">Sobre</a></li>
+                <li class="hideOnMobile"><a href="#jogo"title="jogo" class="NavLink">Jogo</a></li>
+                <li class="menu-button" onclick=showSidebar()><a><img src="Imagens/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" width="50"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="grid">
+                <div data-aos="fade-right">
+                    <p>Bem vindo ao meu site!</p>
+                    <h1>Acesse o meu Github</h1>
+                    <p>
+                        <a href="https://github.com/ZenithSlayer" title="Github" class="btn">Clique aqui</a>
+                    </p>
+                </div>
+                <div data-aos="fade-left">
+                    <img src="Imagens/Placeholder (2).jpg" alt="Banner do site">
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <div data-aos="fade-down" data-aos-anchor-placement="bottom-bottom">
+                <p>Sobre o Projeto e Jogo</p>
+                <img src="Imagens/Space(1).jpeg" alt="">
+            </div>
+            <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <h1>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perspiciatis nihil fugiat vero. Molestiae nostrum neque pariatur ipsa possimus at a, accusantium quibusdam optio eveniet doloribus dolores voluptatibus. Asperiores, ab! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis unde excepturi earum nihil maxime impedit, asperiores recusandae cupiditate pariatur, exercitationem optio consequatur esse quaerat labore, facere corporis odit repellendus delectus.
+                </h1>
+            </div>
+        </section>
+
+        <section id="jogo">
+            <div>
+                <p>Space Trouble</p>
+                <iframe src="https://zenithslayer.github.io/Space-Trouble-game/" style="border:none;height: 400px;width: 700px"></iframe>
+            </div>
+        </section>
+        
+        <section id="form">
+            <div class="contbox">
+                <div class="ui98">
+                    <p>Entre em contato comigo</p>
+                    <img src="Imagens/minimize_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    <img src="Imagens/check_box_outline_blank_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    <img src="Imagens/close_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                </div>
+                <form action="https://script.google.com/macros/s/AKfycbwK5xzdCQqwEuCjNGlKzgoJG7E-Z4trIKDPcQV6ec4B7MQBjesaaCbqjOP8hnf03k_r1g/exec" method="post" name="formContato">
+                    <input type="text" name="nome" placeholder="Nome*" required>
+                    <input type="text" name="numero" placeholder="Numero">
+                    <input type="email" name="email" placeholder="Email*" required>
+                    <textarea name="messagem" rows="7" placeholder="Sua mensagem*" required></textarea>
+                    <input type="submit" value="Enviar a mensagem" id="submit">
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="https://www.instagram.com/zenith.slayer"><img src="Imagens/insta-logo.png" alt=""></a></li>
+                <li><a href="https://www.linkedin.com/in/miguel-lizier-krul/"><img src="Imagens/Linkedin-logo.png" alt=""></a></li>
+            </ul>
+        </nav>
+        <div>
+            <p>Todos os direitos reservados a mim <html>&#x1F60E</html></p>
+            <img src="Imagens/Criador do site.jpg" alt="">
+        </div>
+    </footer>
+</body>
+
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector(".sidebar")
+        sidebar.style.display= "flex"
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector(".sidebar")
+        sidebar.style.display= "none"
+    }
+</script>
+<script src="Script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</html>
