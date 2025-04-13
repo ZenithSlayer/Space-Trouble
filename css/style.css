@@ -111,8 +111,9 @@ main {
     display: block;
     margin: auto;
     max-width: 90%;
-    height: auto;
+    width: 100%;
     border-radius: 400px;
+    border: 5px inset;
 }
 #home .btn {
     font-family: Tektur;
@@ -190,12 +191,18 @@ main {
 .contbox form{
     justify-content: center;
     display: grid;
-    grid-template-columns: 90%;
+    grid-template-columns: 100%;
+    width: 90%;
+    margin: auto;
 }
 
 form input, textarea {
-    max-width: 100%;
     margin: 3px;
+}
+
+form textarea {
+    min-width: 98%;
+    max-width: 98%;
 }
 
 #submit {
@@ -324,5 +331,8 @@ footer div img{
     }
     .ui98 p {
         font-size: smaller;
+    }
+    .logodosite {
+        height: 50px;
     }
 }
