@@ -15,11 +15,11 @@
         <nav class="Navani">
             <ul class="sidebar">
                 <li onclick=hideSidebar()><a><img src="Imagens/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" width="50"></a></li>
-                <li><a href="#home" title="Home" class="NavLink">Home</a></li>
-                <li><a href="#sobre" title="Sobre" class="NavLink">Sobre</a></li>
-                <li><a href="#jogo" title="jogo" class="NavLink">Jogo</a></li>
+                <li onclick=hideSidebar()><a href="#home" title="Home" class="NavLink">Home</a></li>
+                <li onclick=hideSidebar()><a href="#sobre" title="Sobre" class="NavLink">Sobre</a></li>
+                <li onclick=hideSidebar()><a href="#jogo" title="jogo" class="NavLink">Jogo</a></li>
             </ul>
-            <ul>
+            <ul class="header">
                 <li><a href="#home"title="Home" class="NavLink"><img class="logodosite" src="Imagens/Site Logo.png" alt="Logo do site"></a></li>
                 <li class="hideOnMobile"><a href="#home"title="Home" class="NavLink">Home</a></li>
                 <li class="hideOnMobile"><a href="#sobre"title="Sobre" class="NavLink">Sobre</a></li>
@@ -58,7 +58,8 @@
         </section>
 
         <section id="jogo">
-            <div>
+            <p class="celular">Parece que voce esta em um celular, infelizmente o jogo só funciona em um computador</p>
+            <div class="hideOnMobile">
                 <p>Space Trouble</p>
                 <iframe src="Game/index.html" style="border:none;height: 400px;width: 700px"></iframe>
             </div>

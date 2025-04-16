@@ -74,7 +74,8 @@ header nav a:hover {
 }
 
 .sidebar a {
-    width: 100%;
+    float: right;
+    padding: 0 30px 0 100px;
 }
 
 .menu-button {
@@ -168,6 +169,10 @@ main {
     font-family: Tektur;
     font-size: xx-large;
     padding-bottom: 10px;
+}
+
+#jogo .celular {
+    display: none;
 }
 
 #jogo iframe {
@@ -319,6 +324,9 @@ footer div img{
     }
     .ui98 img {
         height: 20px;
+    }
+    #jogo .celular {
+        display: block;
     }
 }
 

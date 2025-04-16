@@ -1232,16 +1232,20 @@ self.C3_ExpressionFuncs = [
 			const v0 = p._GetNode(0).GetVar();
 			return () => v0.GetValue();
 		},
+		() => -10,
+		() => "",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0();
 		},
-		() => "",
 		() => 0.2,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
 		},
+		() => -15,
+		() => 1e+25,
+		() => 0.5,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => Math.floor(f0(10, 50));
@@ -1254,7 +1258,6 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("Explosion-sound (1)", "Explosion-sound (2)", "Explosion-sound (3)");
 		},
-		() => 0.5,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			const v1 = p._GetNode(1).GetVar();
@@ -1272,6 +1275,10 @@ self.C3_ExpressionFuncs = [
 			return () => f0(f1(10, 100));
 		},
 		() => 0.05,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0(30, 50);
+		},
 		() => 960,
 		() => 539,
 		() => 50,
@@ -1287,11 +1294,11 @@ self.C3_ExpressionFuncs = [
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0((-100), (-500));
+			return () => f0((-100), (-200));
 		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() * (2 / 2));
+			return () => ((v0.GetValue() * 2) / 2);
 		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -1329,10 +1336,6 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => (v0.GetValue() * 2);
-		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() * 1.5);
 		},
 		() => 5000,
 		() => "Missile Control\nSold Out"
