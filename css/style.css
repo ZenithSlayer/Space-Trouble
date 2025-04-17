@@ -306,6 +306,10 @@ footer div img{
 }
 
 @media(max-width: 800px) {
+    #jogo .celular {
+        font-size: 20px;
+        padding: 10px;
+    }
     .menu-button {
         display: block;
     }

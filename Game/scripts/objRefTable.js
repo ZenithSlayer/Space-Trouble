@@ -52,15 +52,18 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.TriggerOnce,
 		C3.Plugins.Sprite.Acts.SetOpacity,
 		C3.Plugins.System.Cnds.Repeat,
+		C3.Plugins.System.Cnds.CompareBoolVar,
 		C3.Plugins.System.Acts.GoToLayout,
 		C3.Plugins.Sprite.Cnds.IsOverlapping,
-		C3.Plugins.System.Cnds.CompareBoolVar,
 		C3.Behaviors.Car.Acts.SetDefaultControls,
 		C3.Plugins.Sprite.Cnds.IsOutsideLayout,
 		C3.Plugins.Mouse.Cnds.OnObjectClicked,
 		C3.Plugins.Text.Acts.TypewriterText,
+		C3.Plugins.Text.Acts.SetVisible,
 		C3.Plugins.System.Acts.SubVar,
-		C3.Plugins.System.Acts.ToggleBoolVar
+		C3.Plugins.System.Acts.ToggleBoolVar,
+		C3.Plugins.System.Acts.SetBoolVar,
+		C3.Plugins.Sprite.Acts.SetVisible
 	];
 };
 self.C3_JsPropNameTable = [
@@ -91,11 +94,15 @@ self.C3_JsPropNameTable = [
 	{Sprite4: 0},
 	{Sprite5: 0},
 	{NextLevel: 0},
+	{futuristicutopia: 0},
+	{Text: 0},
 	{EnemiesAlive: 0},
 	{CreditsThisRound: 0},
 	{Points: 0},
 	{MissileCooldown: 0},
 	{CurRound: 0},
+	{MaxRound: 0},
+	{Infmode: 0},
 	{PriceCooldown: 0},
 	{PriceSpeed: 0},
 	{PriceTurnSpeed: 0},
@@ -103,7 +110,8 @@ self.C3_JsPropNameTable = [
 	{Cooldown: 0},
 	{Speed: 0},
 	{TurnSpeed: 0},
-	{MissileControl: 0}
+	{MissileControl: 0},
+	{StartedIntro: 0}
 ];
 
 self.InstanceType = {
@@ -129,5 +137,7 @@ self.InstanceType = {
 	Shop_missileControl: class extends self.ITextInstance {},
 	Sprite4: class extends self.ISpriteInstance {},
 	Sprite5: class extends self.ISpriteInstance {},
-	NextLevel: class extends self.ISpriteInstance {}
+	NextLevel: class extends self.ISpriteInstance {},
+	futuristicutopia: class extends self.ISpriteInstance {},
+	Text: class extends self.ITextInstance {}
 }
